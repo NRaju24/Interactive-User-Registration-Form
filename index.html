@@ -17,73 +17,80 @@
             font-size: 18px;
             font-weight: bold;
         }
-        body {
-            background: linear-gradient(113.3deg, rgb(134, 209, 228) -1.8%, rgb(60, 80, 115) 86.4%);
-            color: whitesmoke;
-        }
-        nav {
+        body{
+            height: 100vh;
+            background-image: url('https://images.unsplash.com/photo-1604079628040-94301bb21b91?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGFic3RyYWN0fGVufDB8fDB8fHww');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             display: flex;
             align-items: center;
-            justify-content: space-around;
-            margin-top: 50px;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+            text-align: center;
         }
+        
         .container {
             margin-top: 50px;
-        }
+        } 
         .border {
             border: 1px solid #ccc;
             padding: 20px;
             border-radius: 5px;
         }
-        .form-background {
-            background: url("Image.jpg") no-repeat center center;
-            background-size: cover;
-            padding: 20px;
-            border-radius: 5px;
-            width: 50%; /* Adjust as needed */
-            margin: auto;
-            color: whitesmoke;
-        }
+        .container{
+    background-image: url('https://images.unsplash.com/photo-1604079628040-94301bb21b91?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGFic3RyYWN0fGVufDB8fDB8fHww');
+    background-size: cover; /* Ensure the background image covers the entire form */
+    padding: 20px; /* Add padding to give some spacing between the form elements and the background */
+    border-radius: 10px; /* Add border radius for rounded corners */
+    color: black;
+}
+
+       
+
+
+
     </style>
 </head>
 <body>
     <div class="text-center pt-3">
         <h1>Login Page</h1>
     </div>
-    <div class="container">
+    <div class="container" style="background-color: aliceblue;">
         <form action="https://sheetdb.io/api/v1/wy6tqq6duj5rx" method="POST" id="sheetdb" onsubmit="return display()" class="p-3">
-            <div class="border bg-dark">
+            <div class="border">
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="fname">First name</label>
+                        <label  for="fname"><b>First name</b></label>
                         <input type="text" class="form-control form-control-custom input-large-bold" id="fname" name="data[Fname]" required oninput="ValidName(this)">
                         <span id="message"></span>
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="lname">Last name</label>
+                        <label for="lname"><b>Last name</b></label>
                         <input type="text" class="form-control form-control-custom input-large-bold" id="lname" name="data[Lname]" required oninput="ValidLname(this)">
                         <span id="lmessage"></span>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="mail">Mail ID</label>
+                        <label for="mail"><b>Mail ID</b></label>
                         <input type="email" class="form-control form-control-custom input-large-bold" name="data[E-mail]" id="mail" required>
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="phone">Phone number</label>
+                        <label for="phone"><b>Phone number</b></label>
                         <input type="tel" class="form-control form-control-custom input-large-bold" id="phone" name="data[Phone-number]" required oninput="validatePhoneNumber(this)">
                         <span id="phoneMessage"></span>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="password">Password</label>
+                        <label for="password"><b>Password</b></label>
                         <input type="password" class="form-control form-control-custom input-large-bold" id="password" name="Password" required oninput="validatePassword()">
                         <span id="password-message"></span>
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="confirm-password">Confirm Password</label>
+                        <label for="confirm-password"><b>Confirm Password</b></label>
                         <input type="password" class="form-control form-control-custom input-large-bold" id="confirm-password" name="Confirm-Password" required oninput="validatePasswordMatch()">
                         <span id="confirm-password-message"></span>
                     </div>
